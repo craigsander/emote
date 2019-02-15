@@ -1,11 +1,5 @@
 from django.db import models
 
-		<option value="">----------------</option>
-		<option value="1">1 (Drained / Exhausted)</option>
-		<option value="2">2 (Foggy)</option>
-		<option value="3">3 (OK / Normal)</option>
-		<option value="4">4 (Agitated)</option>
-		<option value="5">5 (Screaming Inside)</option>
 intensityChoices = (
 	('1', '1 (Drained / Exhausted)'),
 	('2', '2 (Foggy)'),
