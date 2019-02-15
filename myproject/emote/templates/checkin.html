@@ -28,17 +28,17 @@
   <h4>How are you feeling? Where are you? How intense is that feeling? Tell me a littl bit about it.</h4>
   
   <form method="POST" action="" name="checkin">
-	<input type="text" name="feeling" required>
-	<select name="intensity" required>
+	<p>Feeling: <input type="text" name="feeling" required></p>
+	<p>Intensity: <select name="intensity" required>
 		<option value="">----------------</option>
 		<option value="1">1 (Drained / Exhausted)</option>
 		<option value="2">2 (Foggy)</option>
 		<option value="3">3 (OK / Normal)</option>
 		<option value="4">4 (Agitated)</option>
 		<option value="5">5 (Screaming Inside)</option>
-	</select>
-	<input type="text" name="location" required>
-	<textarea name="comments" required>Briefly tell me what you're thinking about.</textarea> 
+	</select></p>
+	<p>Location: <input type="text" name="location" required></p>
+	<p>Details (Tell me what you're thinking about a bit): <br><textarea name="comments" style="width=100%; height=400px;" required>Briefly tell me what you're thinking about.</textarea> </p>
   </form>
   
   <h2><a href="/anna/checkin/">Hourly Check-In</a></h2>
