@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from myproject.emote import views as eviews
+django.http import HttpResponse
 
 urlpatterns = [
     path('admin/', admin.site.urls),
