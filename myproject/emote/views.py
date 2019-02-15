@@ -24,7 +24,7 @@ def checkin(request, template_name='checkin.html'):
 	else:
 		f=CheckinForm()
 	
-	return render_to_response(template_name, locals())
+	return render_to_response(template_name, locals(), context_instance=RequestContext(request))
 	
 
 def incident(request, template_name='incident.html'):
@@ -39,4 +39,4 @@ def incident(request, template_name='incident.html'):
 	else:
 		f = IncidentForm()
 	
-	return render_to_response(template_name, locals())
+	return render_to_response(template_name, locals(), context_instance=RequestContext(request))
