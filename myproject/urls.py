@@ -22,4 +22,5 @@ urlpatterns = [
     path('anna/', eviews.links),
     path('anna/checkin/', eviews.checkin),
     path('anna/incident/', eviews.incident),
+    path('thanks/', eviews.thanks),
 ]
