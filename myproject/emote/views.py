@@ -5,6 +5,12 @@ from django.http import HttpResponseRedirect
 from .forms import IncidentForm, CheckinForm
 from . import models
 
+def get_random_item(max_id=None):
+    if max_id is None:
+        max_id = models.Quote.objects.aggregate(Max('id')).values()[0]
+    min_id = math.ceil(max_id*random.random())
+    return models.Quote.objects.filter(id__gte=min_id)[0]
+
 
 def links(request, template_name='index.html'):
 
@@ -33,13 +39,14 @@ def incident(request, template_name='incident.html'):
 		f = IncidentForm(request.POST)
 		if f.is_valid():
 			f.save()
-			return HttpResponseRedirect('/thanks-incident/')
+			return HttpResponseRedirect('/thanks/')
 		else:
 			f = IncidentForm()
 	else:
 		f = IncidentForm()
 	
 	return render(request, template_name, locals())
+	
 
 def thanks(request, template_name='thanks.html'):
 	

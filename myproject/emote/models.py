@@ -28,3 +28,5 @@ class Incident(models.Model):
 	details = models.TextField()
 	
 	
+class Quote(models.Model):
+	quote = models.TextField()
