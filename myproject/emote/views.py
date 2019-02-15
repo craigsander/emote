@@ -12,6 +12,7 @@ def links(request, template_name='index.html'):
 	
 
 def checkin(request, template_name='checkin.html'):
+	f=CheckinForm()
 	
 	if request.method == 'POST':
 		f = CheckinForm(request.POST)
