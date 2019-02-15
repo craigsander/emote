@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from emote import views as eviews
+from myproject.emote import views as eviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
