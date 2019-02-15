@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from emote import views as eviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('anna/', eviews.links),
+    path('anna/check-in/', eviews.checkin),
+    path('anna/incident/', eviews.incident),
 ]
