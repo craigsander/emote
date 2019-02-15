@@ -36,7 +36,16 @@
 	<p>Where are you? <input type="text" name="location" required></p>
 	
 	<p>Tell Andrei what is going on: <textarea name="comments" style="width=100%; height=400px;" required></textarea></p>
+	<input type="submit"
   </form>
+  
+  
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ f}}
+    <input type="submit" value="Submit">
+  </form>
+  
   
   <h2><a href="/anna/checkin/">Hourly Check-In</a></h2>
   <h2><a href="/anna/incident/">Having Trouble? Tell Me About It Now</a></h2>
