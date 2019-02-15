@@ -1,6 +1,7 @@
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
+from django.db.models import Min, Max
 
 from .forms import IncidentForm, CheckinForm
 from . import models
