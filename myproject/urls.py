@@ -23,4 +23,5 @@ urlpatterns = [
     path('anna/checkin/', eviews.checkin),
     path('anna/incident/', eviews.incident),
     path('thanks/', eviews.thanks),
+    path(r'^robots.txt', lambda x: HttpResponse("User-Agent: *\nDisallow:", content_type="text/plain"), name="robots_file")
 ]
