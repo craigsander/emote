@@ -25,7 +25,21 @@
 
   <!-- Add your site or application content here -->
   <h3>LIFE IS GOOD. It's a beautiful thing before us, RIGHT NOW!</h3>
-  <h4>Sometimes our thoughts stop us from seeing it. So let's track our feelings and find ways we can improve, day by day, bit by bit.</h4>
+  <h4>How are you feeling? Where are you? How intense is that feeling? Tell me a littl bit about it.</h4>
+  
+  <form method="POST" action="" name="checkin">
+	<input type="text" name="feeling" required>
+	<select name="intensity" required>
+		<option value="">----------------</option>
+		<option value="1">1 (Drained / Exhausted)</option>
+		<option value="2">2 (Foggy)</option>
+		<option value="3">3 (OK / Normal)</option>
+		<option value="4">4 (Agitated)</option>
+		<option value="5">5 (Screaming Inside)</option>
+	</select>
+	<input type="text" name="location" required>
+	<textarea name="comments" required>Briefly tell me what you're thinking about.</textarea> 
+  </form>
   
   <h2><a href="/anna/checkin/">Hourly Check-In</a></h2>
   <h2><a href="/anna/incident/">Having Trouble? Tell Me About It Now</a></h2>

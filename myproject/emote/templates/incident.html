@@ -24,8 +24,18 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <h3>LIFE IS GOOD. It's a beautiful thing before us, RIGHT NOW!</h3>
-  <h4>Sometimes our thoughts stop us from seeing it. So let's track our feelings and find ways we can improve, day by day, bit by bit.</h4>
+  <h3>IT'S OKAY. IT'S JUST THOUGHTS AND EMOTIONS.</h3>
+  <h4>Tell me what's happening.</h4>
+  
+  <form method="POST" action="" name="checkin">
+	<select name="type" required>
+		<option value="">----------------</option>
+		<option value="Panic Attack">Panic Attack</option>
+		<option value="Extreme Depression">Extreme Depression</option>		
+	</select>
+	<input type="text" name="location" required>
+	<textarea name="comments" required>Write out what is going on in your head as if you're talking to Andrei.</textarea> 
+  </form>
   
   <h2><a href="/anna/checkin/">Hourly Check-In</a></h2>
   <h2><a href="/anna/incident/">Having Trouble? Tell Me About It Now</a></h2>

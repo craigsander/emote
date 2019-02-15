@@ -8,11 +8,11 @@ def links(request, template_name='index.html'):
 	return render_to_response(template_name, locals())
 	
 
-def checkin(request, template_name='test.html'):
+def checkin(request, template_name='checkin.html'):
 	
 	return render_to_response(template_name, locals())
 	
 
-def incident(request, template_name='test.html'):
+def incident(request, template_name='incident.html'):
 	
 	return render_to_response(template_name, locals())
