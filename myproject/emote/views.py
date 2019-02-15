@@ -40,3 +40,7 @@ def incident(request, template_name='incident.html'):
 		f = IncidentForm()
 	
 	return render(request, template_name, locals())
+
+def thanks(request, template_name='thanks.html'):
+	
+	return render(request, template_name, locals())
