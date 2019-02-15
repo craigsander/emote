@@ -8,7 +8,7 @@ from . import models
 
 def get_random_item(max_id=None):
     if max_id is None:
-        max_id = models.Quote.objects.aggregate(Max('id')).values()[0]
+        max_id = list(models.Quote.objects.aggregate(Max('id')).values()[0])
     min_id = math.ceil(max_id*random.random())
     return models.Quote.objects.filter(id__gte=min_id)[0]
 
