@@ -7,10 +7,14 @@ from .forms import IncidentForm, CheckinForm
 from . import models
 
 def get_random_item(max_id=None):
-    if max_id is None:
-        max_id = list(models.Quote.objects.aggregate(Max('id')).values()[0])
-    min_id = math.ceil(max_id*random.random())
-    return models.Quote.objects.filter(id__gte=min_id)[0]
+	
+	objs = models.Quote.objects.order_by('?').all()
+	
+	if objs:
+		return objs[0]
+	else:
+		return 'N-A'
+
 
 
 def links(request, template_name='index.html'):
@@ -50,5 +54,7 @@ def incident(request, template_name='incident.html'):
 	
 
 def thanks(request, template_name='thanks.html'):
+	
+	quote = get_random_item()
 	
 	return render(request, template_name, locals())
