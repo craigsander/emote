@@ -12,7 +12,7 @@ admin.site.register(models.Incident, IncidentAdmin)
 
 class CheckinAdmin(admin.ModelAdmin):
     model = models.Checkin
-    list_display = ['created', 'feeling', 'intesity', 'location' ]
+    list_display = ['created', 'feeling', 'intensity', 'location' ]
 
 admin.site.register(models.Checkin, CheckinAdmin)
 
