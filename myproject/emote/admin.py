@@ -4,20 +4,20 @@ from . import models
 
 
 class IncidentAdmin(admin.ModelAdmin):
-    model = Incident
+    model = models.Incident
     list_display = ['__all__', ]
 
-admin.site.register(Incident, IncidentAdmin)
+admin.site.register(models.Incident, IncidentAdmin)
 
 
 class CheckinAdmin(admin.ModelAdmin):
-    model = Checkin
+    model = models.Checkin
     list_display = ['__all__', ]
 
-admin.site.register(Checkin, CheckinAdmin)
+admin.site.register(models.Checkin, CheckinAdmin)
 
 class QuoteAdmin(admin.ModelAdmin):
-    model = Quote
+    model = models.Quote
     list_display = ['__all__', ]
 
-admin.site.register(Quote, QuoteAdmin)
+admin.site.register(models.Quote, QuoteAdmin)
