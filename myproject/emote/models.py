@@ -23,7 +23,7 @@ class Checkin(models.Model):
 	
 	
 class Incident(models.Model):
-	person = models.CharField(max_lengt=300)
+	person = models.CharField(max_length=300)
 	created = models.DateTimeField(auto_now_add=True)
 	incidentType = models.CharField(max_length=300, choices=incidentTypeChoices)
 	location = models.CharField(max_length=300)
