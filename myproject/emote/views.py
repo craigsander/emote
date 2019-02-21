@@ -29,10 +29,10 @@ def checkin(request, template_name='checkin.html'):
 		person = 'Craig'
 	else:
 		person = 'Anna'
-	request.POST['person'] = person
 
 	if request.method == 'POST':
 		f = CheckinForm(request.POST)
+		f['person'] = person
 		if f.is_valid():
 			f.save()
 			return HttpResponseRedirect('/thanks/')
