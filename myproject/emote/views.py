@@ -29,7 +29,7 @@ def checkin(request, template_name='checkin.html'):
 		f = CheckinForm(request.POST)
 		if f.is_valid():
 			f.save()
-			referrer = request.META.HTTP_REFERER
+			referrer = request.META.get('HTTP_REFERER')
 			if 'craig' in referrer:
 				f.person = 'Craig'
 			else:
