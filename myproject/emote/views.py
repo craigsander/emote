@@ -34,6 +34,7 @@ def checkin(request, template_name='checkin.html'):
 		f = CheckinForm(request.POST)
 		f['person'] = person
 		if f.is_valid():
+			f.cleaned_data['person'] = person
 			f.save()
 			return HttpResponseRedirect('/thanks/')
 		else:
