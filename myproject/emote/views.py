@@ -24,15 +24,16 @@ def links(request, template_name='index.html'):
 
 def checkin(request, template_name='checkin.html'):
 	f=CheckinForm()
-	
+	referrer = request.META.get('HTTP_REFERER')
+	if 'craig' in referrer:
+		person = 'Craig'
+	else:
+		person = 'Anna'
+	request.POST['person'] = person
+
 	if request.method == 'POST':
 		f = CheckinForm(request.POST)
 		if f.is_valid():
-			referrer = request.META.get('HTTP_REFERER')
-			if 'craig' in referrer:
-				f.person = 'Craig'
-			else:
-				f.person = 'Anna'
 			f.save()
 			return HttpResponseRedirect('/thanks/')
 		else:
