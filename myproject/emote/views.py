@@ -22,19 +22,15 @@ def links(request, template_name='index.html'):
 	return render_to_response(template_name, locals())
 	
 
-def checkin(request, template_name='checkin.html'):
+def checkin(request, person, template_name='checkin.html'):
 	f=CheckinForm()
 
 	referrer = request.META.get('HTTP_REFERER')
-	if 'craig' in referrer:
-		person = 'Craig'
-	else:
-		person = 'Anna'
+
 		
 	if request.method == 'POST':
 		f = CheckinForm(request.POST)
 		if f.is_valid():
-			f.data['person'] = person
 			f.save()
 			return HttpResponseRedirect('/thanks/')
 		else:
