@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('anna/', eviews.links),
     path('anna/checkin/', eviews.checkin),
+    path('craig/checkin/', eviews.checkin),
     path('anna/incident/', eviews.incident),
     path('thanks/', eviews.thanks),
     path('robots.txt', lambda x: HttpResponse("User-Agent: *\nDisallow: /", content_type="text/plain"), name="robots_file")

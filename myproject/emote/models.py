@@ -14,6 +14,7 @@ incidentTypeChoices = (
 )
 
 class Checkin(models.Model):
+	person = models.CharField(max_length=300)
 	created = models.DateTimeField(auto_now_add=True)
 	feeling = models.CharField(max_length=300)
 	intensity = models.CharField(max_length=300, choices=intensityChoices)
@@ -22,6 +23,7 @@ class Checkin(models.Model):
 	
 	
 class Incident(models.Model):
+	person = models.CharField(max_lengt=300)
 	created = models.DateTimeField(auto_now_add=True)
 	incidentType = models.CharField(max_length=300, choices=incidentTypeChoices)
 	location = models.CharField(max_length=300)
